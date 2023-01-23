@@ -2,22 +2,22 @@
 AHOY-DTU (https://github.com/grindylow/ahoy) delivers power metrics from inverter via MQTT to a MQTT (mosquitto) server. Telegraf subscribes that topic (“inverter/#”) and writes everything to InfluxDB. The Dashboard consumes data from InfluxDB.
 
 ## Architecture:
-Inverter -> Ahoy-DTU (ESP8266) -> MQTT (mosquitto) -> Telegraf -> InfluxDB -> Grafana
+Inverter -> Ahoy-DTU -> MQTT (mosquitto) -> Telegraf -> InfluxDB -> Grafana
 
-Warning: The connection Ahoy-DTU (ESP8266) -> MQTT (mosquitto) is currently insecure (no SSL possible).
+Warning: The connection Ahoy-DTU -> MQTT (mosquitto) is currently insecure (no SSL possible).
 
 Dashboard content: Two sections, an overview and a detail area with all metrics that might be interesting for you.
 
 ## Prerequisites:
 
 * Ahoy-DTU with configured MQTT server (topic and name of inverter will be configured in dashboard as variable)
-* MQTT server (listening on port 1883; SSL is not supported by AHOY-DTU yet)
+* MQTT server (listening on port 1883; SSL is not supported by Ahoy-DTU yet)
 * Telegraf (connected to an InluxDB, consumer configured as given below)
 * InfluxDB (connected/consumable by your Grafana installation)
 
 ## Installation:
 
-* Configure Ahoy DTU to send MQTT messages to your MQTT Server
+* Configure Ahoy-DTU to send MQTT messages to your MQTT Server
 * Check if you receive MQTT messages “mosquitto_sub -h localhost -t ahoyTopic/# -u “USER” -P “PASSWORD” -v”
 * Results looks like:
   * ahoyTopic/ahoyInvertername/ch1/U_DC 34.500
