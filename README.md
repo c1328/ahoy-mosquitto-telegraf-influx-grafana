@@ -55,6 +55,8 @@ fetch = [“weather”, “forecast”]
 interval = “10m”
 ```
 
+Parsing MQTT data a little bit more detailed: https://github.com/lumapu/ahoy/issues/517#issuecomment-1382729683
+
 Optional: I added some weather metrics to the dashboard (e.g. cloudiness of the region my PV/inverter is located). Please check https://grafana.com/grafana/dashboards/9710-open-weather-map/ to understand how to get weather metrics via Telegraf to your InfluxDB. I set the parameter to fetch = [“weather”, “forecast”] to get some cloudiness forecast as well, that’s why there are two variables (Country and City) to specify your location to get the right one in case you collect weather metrics for more than a single location.
 
 
