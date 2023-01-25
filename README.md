@@ -25,7 +25,7 @@ Dashboard content: Two sections, an overview and a detail area with all metrics 
   * ahoyTopic/ahoyInvertername/ch1/P_DC 30.800
   * (…)
 * With setting up mqtt_consumer in your Telegraf config you should see a table “mqtt_consumer” in your Telegraf database at InfluxDB
-* Import Grafana Dashboard via JSON or ID from https://grafana.com/grafana/dashboards/16850-pv-power-ahoy/
+* Import lateset version of Grafana dashboard via JSON. The dashboard was former published here: https://grafana.com/grafana/dashboards/16850-pv-power-ahoy/
 
 Enjoy dashboard and producing energy (dashboard is configured for one inverter and two panels east/west - please adjust to your needs)
 
