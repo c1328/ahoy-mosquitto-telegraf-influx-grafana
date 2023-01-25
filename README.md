@@ -1,6 +1,8 @@
 # ahoy-mosquitto-telegraf-influx-grafana
 AHOY-DTU (https://github.com/grindylow/ahoy) delivers power metrics from inverter via MQTT to a MQTT (mosquitto) server. Telegraf subscribes that topic (“inverter/#”) and writes everything to InfluxDB. The Dashboard consumes data from InfluxDB.
 
+This dashboard was originally published here: https://grafana.com/grafana/dashboards/16850-pv-power-ahoy/
+
 ## Architecture:
 Inverter -> Ahoy-DTU -> MQTT (mosquitto) -> Telegraf -> InfluxDB -> Grafana
 
@@ -25,7 +27,7 @@ Dashboard content: Two sections, an overview and a detail area with all metrics 
   * ahoyTopic/ahoyInvertername/ch1/P_DC 30.800
   * (…)
 * With setting up mqtt_consumer in your Telegraf config you should see a table “mqtt_consumer” in your Telegraf database at InfluxDB
-* Import lateset version of Grafana dashboard via JSON. The dashboard was former published here: https://grafana.com/grafana/dashboards/16850-pv-power-ahoy/
+* Import lateset version of Grafana dashboard via JSON.
 
 Enjoy dashboard and producing energy (dashboard is configured for one inverter and two panels east/west - please adjust to your needs)
 
