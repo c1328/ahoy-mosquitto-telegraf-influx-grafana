@@ -14,7 +14,7 @@ Dashboard content: Two sections, an overview and a detail area with all metrics 
 
 * Ahoy-DTU with configured MQTT server (topic and name of inverter will be configured in dashboard as variable)
 * MQTT server (listening on port 1883; SSL is not supported by Ahoy-DTU yet)
-* Telegraf (connected to an InluxDB, consumer configured as given below)
+* Telegraf (connected to an InfluxDB, consumer configured as given below)
 * InfluxDB (connected/consumable by your Grafana installation)
 
 ## Installation:
